@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="classes" name="Failed suite [Wdiodemoapp]" guice-stage="DEVELOPMENT">
+  <parameter name="platformVersion" value="14"/>
+  <parameter name="platformName" value="Android"/>
+  <parameter name="deviceName" value="R5CX80M0H2K"/>
+  <listeners>
+    <listener class-name="com.foodics.listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="WdiodemoappTest(failed)">
+    <classes>
+      <class name="com.foodics.testcases.LoginScreenTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="testLoginSuccess"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.foodics.testcases.LoginScreenTest -->
+      <class name="com.foodics.testcases.SignUpScreenTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="testSignUpSuccess"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- com.foodics.testcases.SignUpScreenTest -->
+    </classes>
+  </test> <!-- WdiodemoappTest(failed) -->
+</suite> <!-- Failed suite [Wdiodemoapp] -->

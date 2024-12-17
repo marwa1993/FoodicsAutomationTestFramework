@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Wdiodemoapp" parallel="classes">
+
+    <!-- Parameters for the test suite -->
+    <parameter name="deviceName" value="R5CX80M0H2K" />
+    <parameter name="platformName" value="Android" />
+    <parameter name="platformVersion" value="14" />
+
+    <!-- Listeners for the suite -->
+    <listeners>
+        <listener class-name="com.foodics.listeners.TestListener" />
+    </listeners>
+
+
+    <test name="WdiodemoappTest" thread-count="1" parallel="classes">
+        <classes>
+<!--             Run SignUpScreenTest first -->
+            <class name="com.foodics.testcases.SignUpScreenTest" />
+            
+<!--             Run LoginScreenTest second  -->
+            <class name="com.foodics.testcases.LoginScreenTest" />
+<!--             Run FormsScreenTest third -->
+            <class name="com.foodics.testcases.FormsScreenTest" />
+<!--             Run SwipeScreenTest fourth -->
+            <class name="com.foodics.testcases.SwipeScreenTest" />
+        </classes>
+    </test>
+
+
+</suite>
